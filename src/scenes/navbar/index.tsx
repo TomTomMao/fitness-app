@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Logo from "@/assets/Logo.png";
 import Link from "./Link";
-import { SelectedPage } from "@/share/types";
+import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import ActionButton from "@/share/ActionButton";
+import ActionButton from "@/shared/ActionButton";
 
 
 type Props = {
@@ -34,10 +34,6 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
               (<div className={`${flexBetween} w-full`}>
                 <div className={`${flexBetween} gap-8 text-sm`}>
                   <Link page="Home"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
-                  <Link page="About"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
@@ -87,10 +83,6 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           {/* MENU ITEMS */}
           <div className="ml-[33%] flex flex-col gap-10 text-2xl">
             <Link page="Home"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link page="About"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
